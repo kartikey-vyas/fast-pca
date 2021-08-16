@@ -1,9 +1,7 @@
 /*****************************************************************************************************
 	myEigenFunctions.h
 
-	This file is where you'll put the header information about the functions you write.  This is just 
-	the argument list (as it is in the first line of your function declarations in myEigenFunctions.cpp)
-	followed by a semi-colon.  Two example functions have been done for you.
+  header information about the functions
 
 ====================================================================================================*/
 

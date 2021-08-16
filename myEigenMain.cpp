@@ -1,14 +1,7 @@
 
 /******************************************************************************************************
 
-	This is a template main file for the ENGSCI331 Eigenvectors module.  It demonstrates some new C++ 
-	syntax and functions, as described in the accompanying document ENGSCI331_Eigenstuff.pdf.  
-
-	*** There are some examples of "bad" programming in here (bits missing etc) that you will need to 
-	find and fix, though this file should compile without errors straight away. ***
-
-	You should use this file to get you started on the assignment.  You're welcome to change whatever
-	you'd like to as you go, this is only a starting point.
+	Eigenvector decomposition main script
 	
 ======================================================================================================*/
 
