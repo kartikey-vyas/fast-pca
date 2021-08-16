@@ -5,16 +5,16 @@ Principal Component Analysis (PCA) is a popular dimensionality reduction algorit
 
 ## Eigendecomposition
 
-Let $\textbf{A}$ be a square n x n matrix with n linearly independent eigenvectors. Then $\textbf{A}$ can be factorised as:
+Let A be a square n x n matrix with n linearly independent eigenvectors. Then A can be factorised as:
 
-$$\textbf{Av} = \lambda \textbf{v}$$
-$$\textbf{AQ} = \textbf{Q} \Lambda$$
-$$\textbf{A} = \textbf{Q} \Lambda \textbf{Q}^{-1}$$
+![equation](https://latex.codecogs.com/gif.latex?%5Ctextbf%7BAv%7D%20%3D%20%5Clambda%20%5Ctextbf%7Bv%7D%20%5C%5C%20%5Ctextbf%7BAQ%7D%20%3D%20%5Ctextbf%7BQ%7D%20%5CLambda%20%5C%5C%20%5Ctextbf%7BA%7D%20%3D%20%5Ctextbf%7BQ%7D%20%5CLambda%20%5Ctextbf%7BQ%7D%5E%7B-1%7D%20%5C%5C)
 
 This repo contains code which implements the power-deflate method to find eigenvectors and eigenvalues of a data set. 
 
 ### The Power Method
-The power method is a numerical technique to estimate the dominant eigenpair of a matrix. An eigenvalue $\lambda_k$ is dominant if $|\lambda _ k | \ge |\lambda _ j| \ \ \ \ \ \forall j$. We refer to such $(\textbf{s}_k , \lambda_k)$ as dominant eigenpairs.
+The power method is a numerical technique to estimate the dominant eigenpair of a matrix.
+
+![equation](https://latex.codecogs.com/gif.latex?%5Ctextup%7BAn%20eigenvalue%7D%20%5C%20%5Clambda_k%20%5C%20%5Ctextup%7Bis%20dominant%20if%7D%20%5C%20%7C%5Clambda%20_%20k%20%7C%20%5Cge%20%7C%5Clambda%20_%20j%7C%20%5C%20%5C%20%5C%20%5C%20%5C%20%5Cforall%20j.%20%5C%5C%20%5Ctextup%7BWe%20refer%20to%20such%7D%20%5C%20%28%5Ctextbf%7Bs%7D_k%20%2C%20%5Clambda_k%29%20%5C%20%5Ctextup%7Bas%20dominant%20eigenpairs.%7D)
 
 Pseudocode:
 ```matlab
@@ -37,9 +37,9 @@ Out: (s, lambda_hat)   % converged eigenpair estimate
 ### The Deflate Method
 Deflation removes the largest eigenvector from the matrix.
 
-$$\textbf{C} = \textbf{A} - \lambda_1x_1x_1^T$$
+![equation](https://latex.codecogs.com/gif.latex?%5Ctextbf%7BC%7D%20%3D%20%5Ctextbf%7BA%7D%20-%20%5Clambda_1x_1x_1%5ET)
 
-Where $x_1$ is the normalised eigenvector corresponding to largest eigenvalue $\lambda_1$.
+Where x_1 is the normalised eigenvector corresponding to largest eigenvalue.
 
 Combining this with the power method, we can numerically compute successive eigenpairs of a matrix.
 
@@ -48,9 +48,9 @@ These methods have been implemented in C++ code in the file `myEigenFunctions.cp
 ## Principal Components
 PCA assumes that each column of the feature matrix has zero mean. As such, the covariance matrix must be computed only after *centering* the feature matrix; ie ensuring that each column has a mean of 0.
 
-$$\text{cov} = \frac{1}{n-1} \textbf{X}_c^T \textbf{X}_c $$
+![eqn](https://latex.codecogs.com/gif.latex?%5Ctext%7Bcov%7D%20%3D%20%5Cfrac%7B1%7D%7Bn-1%7D%20%5Ctextbf%7BX%7D_c%5ET%20%5Ctextbf%7BX%7D_c)
 
-Where $ \textbf{X}_c $ is the centered feature matrix.
+Where X_c is the centered feature matrix.
 
 
 ## The Data
